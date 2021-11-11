@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "app",
+      "type": "com.swann.knowyourneighborhood.googlefacebook.login.configuration.AppProperties",
+      "sourceType": "com.swann.knowyourneighborhood.googlefacebook.login.configuration.AppProperties"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
