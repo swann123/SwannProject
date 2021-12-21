@@ -1,0 +1,304 @@
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Patua+One);
+
+$default-font-family: Arial, Helvetica, sans-serif;
+
+$black: #000;
+$dark-gray: #444;
+$navy: #002280;
+$dark-red: #990000;
+$red:#c51110;
+$gold:#feb30c;
+
+a{color:$navy;}
+a:hover{color:$gold;}
+
+html {
+  color: $dark-gray;
+  font-family: $default-font-family;
+}
+
+body{color:$dark-gray;font-size:1em;line-height:1.6em;}
+p{margin:0 0 20px;}
+small{font-size:85%;}
+  
+h1, h2{font-family:Patua One;color:dark-gray;font-weight:normal;}
+
+h3,h4,h5{font-family:$default-font-family;color:$dark-gray;font-weight:normal;}
+
+
+h1{line-height:40px;}
+h2{line-height:30px;}
+h3{line-height:30px;font-weight:bold;}
+h4{line-height:20px;font-weight:bold;}
+h5{line-height:20px;font-weight:bold;}
+
+h1{font-size:2.083em;color:#c51110;border-top:5px solid #ebebeb;border-bottom:1px solid #ebebeb;padding:7px 0;}
+h2{font-size:1.6em;}
+h3{font-size:1.2em;}
+h4{font-size:1.1em;}
+h5{font-size:1em;}
+
+        #container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        @media only screen and (max-width: 768px) {
+            #container {
+                width: 90%;
+                margin: 0 auto;
+            }
+        }
+
+
+
+ul.resp-tabs-list, p {
+    
+}
+
+.resp-tabs-list li {
+    font-weight: 600;
+    font-size: 13px;
+    display: inline-block;
+    padding: 13px 15px;
+    margin: 0 4px 0 0;
+    list-style: none;
+    cursor: pointer;
+    float: left;
+}
+
+.resp-tabs-container {
+    padding: 0px;
+    background-color: #fff;
+    clear: left;
+}
+
+h2.resp-accordion {
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+
+.resp-tab-content {
+    display: none;
+    padding: 15px;
+}
+
+.resp-tab-active {
+	border: 1px solid #c1c1c1 !important;
+	border-bottom: none;
+	margin-bottom: -1px !important;
+	padding: 12px 14px 14px 14px !important;
+	border-top: 1px solid #c1c1c1 !important;
+	border-bottom: 0px #fff solid !important;
+}
+
+.resp-tab-active {
+    border-bottom: none;
+    background-color: #fff;
+}
+
+.resp-content-active, .resp-accordion-active {
+    display: block;
+}
+
+.resp-tab-content {
+    border: 1px solid #c1c1c1;
+	
+}
+
+h2.resp-accordion {
+    font-size: 13px;
+    border: 1px solid #c1c1c1;
+    border-top: 0px solid #c1c1c1;
+    margin: 0px;
+    padding: 5px 15px;
+}
+
+h2.resp-tab-active {
+    border-bottom: 0px solid #c1c1c1 !important;
+    margin-bottom: 0px !important;
+    padding: 10px 15px !important;
+}
+
+h2.resp-tab-title:last-child {
+    border-bottom: 12px solid #c1c1c1 !important;
+    background: blue;
+}
+
+/*-----------Vertical tabs-----------*/
+.resp-vtabs ul.resp-tabs-list {
+    float: left;
+    width: 30%;
+}
+
+.resp-vtabs .resp-tabs-list li {
+    display: block;
+    padding: 15px 15px !important;
+    margin: 0 0 4px;
+    cursor: pointer;
+    float: none;
+}
+
+.resp-vtabs .resp-tabs-container {
+    padding: 0px;
+    background-color: #fff;
+    border: 1px solid #c1c1c1;
+    float: left;
+    width: 68%;
+    min-height: 250px;
+    clear: none;
+  margin: 3px 0 0;
+}
+
+.resp-vtabs .resp-tab-content {
+    border: none;
+    word-wrap: break-word;
+}
+
+.resp-vtabs li.resp-tab-active { 
+position: relative;
+z-index: 1;
+margin-right: -1px !important;
+padding: 14px 15px 15px 14px !important;
+border-top: 1px solid;
+border: 1px solid #5AB1D0 !important;
+border-left: 1px solid !important;
+margin-bottom: 4px !important;
+border-right: 1px #FFF solid !important;
+}
+
+.resp-arrow {
+    width: 0;
+    height: 0;
+    float: right;
+    margin-top: 15px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid #c51110;
+}
+
+h2.resp-tab-active span.resp-arrow {
+    border: none;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid #9B9797;
+}
+
+/*-----------Accordion styles-----------*/
+h2.resp-tab-active {
+    background: #DBDBDB;/* !important;*/
+}
+
+.resp-easy-accordion h2.resp-accordion {
+    display: block;
+}
+
+.resp-easy-accordion .resp-tab-content {
+    border: 1px solid #c1c1c1;
+}
+
+.resp-easy-accordion .resp-tab-content:last-child {
+    border-bottom: 1px solid #c1c1c1;/* !important;*/
+}
+
+.resp-jfit {
+    width: 100%;
+    margin: 0px;
+}
+
+.resp-tab-content-active {
+    display: block;
+}
+
+h2.resp-accordion:first-child {
+    border-top: 1px solid #c1c1c1;/* !important;*/
+}
+
+/*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
+@media only screen and (max-width: 768px) {
+    ul.resp-tabs-list {
+        display: none;
+    }
+
+    h2.resp-accordion {
+        display: block;
+    }
+
+    .resp-vtabs .resp-tab-content {
+        border: 1px solid #C1C1C1;
+    }
+
+    .resp-vtabs .resp-tabs-container {
+        border: none;
+        float: none;
+        width: 100%;
+        min-height: 100px;
+        clear: none;
+    }
+
+    .resp-accordion-closed {
+        display: none !important;
+    }
+
+    .resp-vtabs .resp-tab-content:last-child {
+        border-bottom: 1px solid #c1c1c1 !important;
+    }
+}
+
+/*Table Styles*/
+.table{width:100%;}
+table {
+    background-color: rgba(0, 0, 0, 0);
+    border-collapse: collapse;
+    border-spacing: 0;
+    max-width: 100%;
+}
+.table tbody tr:hover > td, .table tbody tr:hover > th {
+    background-color: #f5f5f5;
+}
+.table thead th {
+    vertical-align: bottom;
+}
+.table th {
+    font-weight: bold;
+    border-bottom:1px solid $red;
+}
+.table th, .table td {
+    border-top: 1px solid #DDDDDD;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+/*Form Styles*/
+form h2{color:$dark-gray;font-size:1em;border-bottom:1px solid #ccc;font-family: $default-font-family;margin:0;font-weight:bold;}
+.form-filter{background-color:#f5f5f5;background:linear-gradient(0, #ebebeb, #fff);border:1px solid #ccc;display:inline-block;padding:15px 10px;}
+
+.form-contact{display:inline-block;padding:15px 10px;width:90%;}
+
+.form-row{clear:both;margin:0 0 15px;display:table;}
+.form-group{background-color: #f5f5f5;margin:0 0 10px;padding:15px 10px;}
+.form-label{float:left;padding:5px 15px 0;text-align: right;width: 160px;}
+
+.input-search{}
+
+.btn{background-color:$gold;border:1px solid #999;display:inline-block;padding:4px 10px;margin:0; font-size:.875em;font-weight:bold;line-height: 20px;text-align:center;cursor:pointer;color:#333;}
+
+.btn:hover{background-color:#e8d664;}
+
+.form-contact .btn{margin:10px 0 0;}
+
+input[type="text"]{height:26px;border-color:1px $dark-gray;}
+
+select {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    width: 200px;
+    height:30px;
+}
+
+.large-input{width:300px;}
+.medium-input{width:200px;}
+.small-input{width:100px;}
