@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation"
+		value="false" />
+	<constant name="struts.devMode" value="false" />
+	<package name="default" namespace="/" extends="struts-default">
+
+		<default-action-ref name="index" />
+
+		<action name="index">
+			<result>/jsp/index.jsp</result>
+		</action>
+
+		<action name="login">
+			<result>/jsp/login.jsp</result>
+		</action>
+
+		<action name="loginprocess"
+			class="com.sdl.portal.action.LoginProcess" method="execute">
+			<result name="login_success">/jsp/abc_home.jsp</result>
+			<result name="login_fail">/jsp/login.jsp</result>
+		</action>
+
+
+		<action name="logout"
+			class="com.sdl.portal.action.LoginProcess" method="logout">
+			<result name="success">jsp/login.jsp</result>
+		</action>
+
+		
+		<action name="forgetpassword">
+			<result>jsp/forgetPassword.jsp</result>
+		</action>
+		
+		<action name="findemail"
+			class="com.sdl.portal.action.LoginProcess" method="findemail">
+			<result name="success">jsp/changePassword.jsp</result>
+			<result name="fail">jsp/emailnotfound.jsp</result>
+		</action>
+		
+
+		<action name="forgetPasswordProcess"
+			class="com.sdl.portal.action.LoginProcess" method="updatePassword">
+			<result name="success">jsp/login.jsp</result>
+		</action>
+		
+		
+		<action name="register">
+			<result>/jsp/register.jsp</result>
+		</action>
+
+
+		<action name="regProcess"
+			class="com.sdl.portal.action.RegisterProcess" method="execute">
+			<result name="reg_success">/jsp/reg_success.jsp</result>
+			<result name="reg_fail">/jsp/register.jsp</result>
+		</action>
+
+
+		<action name="profile" class="com.sdl.portal.action.ProfileProcess" method="execute">
+			<result name="success">/jsp/profile.jsp</result>
+			<result name="error">/jsp/login.jsp</result>
+		</action>
+		
+		<action name="updateProfile" class="com.sdl.portal.action.ProfileProcess" method="execute">
+			<result name="success">/jsp/updateProfile.jsp</result>
+			<result name="error">/jsp/login.jsp</result>
+		</action>
+		
+		
+		<action name="updateProfileProcess" class="com.sdl.portal.action.ProfileProcess" method="updateUser">
+			<result name="upd_success">/jsp/profile.jsp</result>
+			<result name="upd_fail">/jsp/updateProfile.jsp</result>
+		</action>
+		
+
+		<action name="search" class="com.sdl.portal.action.SearchProcess" method="execute">
+			<result name="search_success">/jsp/search_result.jsp</result>
+		</action>
+		
+		
+		<action name="viewProfile" class="com.sdl.portal.action.ViewProfile" method="execute">
+			<result name="success">/jsp/viewprofile.jsp</result>
+		</action>
+		
+		
+		<action name="manageUser" class="com.sdl.portal.action.manageUser" method="execute">
+			<result name="success">/jsp/alluser.jsp</result>
+		</action>
+
+
+		<action name="deleteUser" class="com.sdl.portal.action.manageUser" method="deleteUser">
+			<result name="del_success">/jsp/deletesuccess.jsp</result>
+		</action>
+
+
+
+	</package>
+</struts>
